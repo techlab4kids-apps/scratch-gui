@@ -66,7 +66,7 @@ const projectData = translateFunction => {
             },
             {
                 isStage: false,
-                name: translator(messages.sprite, {index: 1}),
+                name: 'Otto',
                 variables: {},
                 lists: {},
                 broadcasts: {},
@@ -74,10 +74,10 @@ const projectData = translateFunction => {
                 currentCostume: 0,
                 costumes: [
                     {
-                        assetId: 'bcf454acf82e4504149f7ffe07081dbc',
+                        assetId: 'df6153c449c93bcd6eaeec23adb09f42',
                         name: translator(messages.costume, {index: 1}),
                         bitmapResolution: 1,
-                        md5ext: 'bcf454acf82e4504149f7ffe07081dbc.svg',
+                        md5ext: 'df6153c449c93bcd6eaeec23adb09f42.svg',
                         dataFormat: 'svg',
                         rotationCenterX: 48,
                         rotationCenterY: 50
@@ -103,7 +103,7 @@ const projectData = translateFunction => {
                         md5ext: '83c36d806dc92327b9e7049a565c6bff.wav'
                     }
                 ],
-                volume: 100,
+                volume: 0,
                 visible: true,
                 x: 0,
                 y: 0,

@@ -7,6 +7,18 @@ import musicInsetIconURL from './music/music-small.svg';
 import penIconURL from './pen/pen.png';
 import penInsetIconURL from './pen/pen-small.svg';
 
+import penExtIconURL from './techlab4kids/techlab4kids_sfondo.png';
+import penExtInsetIconURL from './pen_ext/pen-small.svg';
+
+import mqttIconURL from './techlab4kids/techlab4kids_sfondo_mqtt.png';
+import mqttInsetIconURL from './mqtt/mqtt.org-piccolo.png';
+
+import mqttAgruminoIconURL from './techlab4kids/techlab4kids_sfondo_mqtt.png';
+import mqttAgruminoInsetIconURL from './mqtt/LifelyLogo.png';
+
+import techLab4KidsIconURL from './techlab4kids/techlab4kids_sfondo.png';
+import techLab4KidsInsetIconURL from './techlab4kids/techlab4kids.png';
+
 import videoSensingIconURL from './videoSensing/video-sensing.png';
 import videoSensingInsetIconURL from './videoSensing/video-sensing-small.svg';
 
@@ -87,6 +99,98 @@ export default [
         ),
         featured: true
     },
+    {
+        name: 'Super Penna!',
+        extensionId: 'tl4kSuperPen',
+        collaborator: 'Giancarlo Orru\' (TechLAB4Kids)',
+        iconURL: penExtIconURL,
+        insetIconURL: penExtInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Super Penna! (TechLAB4Kids)"
+                description="Some new blocks to allow Scratch to write text!"
+                id="gui.extension.tl4kSuperPen.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: false,
+        bluetoothRequired: false
+
+    },
+    {
+        name: 'MQTT Client',
+        extensionId: 'mqttClient',
+        collaborator: 'Giancarlo Orru\' (TechLAB4Kids)',
+        iconURL: mqttIconURL,
+        insetIconURL: mqttInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="MQTT client (TechLAB4Kids)"
+                description="Some new blocks to allow Scratch to do IoT magics!"
+                id="gui.extension.mqttClient.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: false,
+        bluetoothRequired: false
+    },
+    {
+        name: 'MQTT Agrumino Client',
+        extensionId: 'mqttAgruminoClient',
+        collaborator: 'Giancarlo Orru\' (TechLAB4Kids)',
+        iconURL: mqttAgruminoIconURL,
+        insetIconURL: mqttAgruminoInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="MQTT Agrumino client (TechLAB4Kids & Lifely)"
+                description="Some new blocks to allow Scratch to do IoT magics!"
+                id="gui.extension.mqttAgruminoClient.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: false,
+        bluetoothRequired: false
+    },
+    {
+        name: 'TechLAB 4 Kids Blocks',
+        extensionId: 'techLAB4KidsBlocks',
+        collaborator: 'Giancarlo Orru\' (TechLAB4Kids)',
+        iconURL: techLab4KidsIconURL,
+        insetIconURL: techLab4KidsInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="TechLAB 4 Kids (TechLAB4Kids & Lifely)"
+                description="Some new blocks to allow Scratch to do IoT magics!"
+                id="gui.extension.fabLab4KidsBlocks.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: false,
+        bluetoothRequired: false
+    },
+    {
+        name: 'TechLAB 4 Kids Simplified Blocks',
+        extensionId: 'techLAB4KidsSimplifiedBlocks',
+        collaborator: 'Giancarlo Orru\' (TechLAB4Kids)',
+        iconURL: techLab4KidsIconURL,
+        insetIconURL: techLab4KidsInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="TechLAB 4 Kids: blocchi semplificati (TechLAB4Kids)"
+                description="Blocchi semplificati"
+                id="gui.extension.techLAB4KidsSimplifiedBlocks.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: false,
+        bluetoothRequired: false
+    },
+
     {
         name: (
             <FormattedMessage

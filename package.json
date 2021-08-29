@@ -1,9 +1,10 @@
 {
   "name": "scratch-gui",
-  "version": "0.1.0",
-  "description": "GraphicaL User Interface for creating and running Scratch 3.0 projects",
+  "version": "3.24.6",
+  "description": "GraphicaL User Interface for creating and running Scratch 3.24.0.TL4K03 projects",
   "main": "./dist/scratch-gui.js",
   "scripts": {
+    "prebuild": "npm run clean && npm i && npm link scratch-vm scratch-render",
     "build": "npm run clean && webpack --colors --bail",
     "clean": "rimraf ./build && mkdirp build && rimraf ./dist && mkdirp dist",
     "deploy": "touch build/.nojekyll && gh-pages -t -d build -m \"Build for $(git log --pretty=format:%H -n1) [skip ci]\"",
@@ -71,6 +72,7 @@
     "react-tabs": "2.3.0",
     "react-tooltip": "3.8.0",
     "react-virtualized": "9.20.1",
+    "react-visibility-sensor": "^5.1.1",
     "redux": "3.7.2",
     "redux-throttle": "0.1.1",
     "scratch-audio": "0.1.0-prerelease.20200528195344",

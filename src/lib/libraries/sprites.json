@@ -1,5 +1,51 @@
 [
     {
+        "name": "Otto",
+        "md5": "df6153c449c93bcd6eaeec23adb09f42.svg",
+        "type": "costume",
+        "tags": [
+            "robot"
+        ],
+        "info": [
+            48,
+            50,
+            1
+        ],
+        "json": {
+            "isStage": false,
+            "name": "Abby",
+            "variables": {},
+            "lists": {},
+            "broadcasts": {},
+            "blocks": {},
+            "comments": {},
+            "currentCostume": 0,
+            "costumes": [
+                {
+                    "assetId": "df6153c449c93bcd6eaeec23adb09f42",
+                    "name": "otto-a",
+                    "bitmapResolution": 1,
+                    "md5ext": "df6153c449c93bcd6eaeec23adb09f42.svg",
+                    "dataFormat": "svg",
+                    "rotationCenterX": 31,
+                    "rotationCenterY": 100
+                }
+            ],
+            "sounds": [
+            ],
+            "volume": 100,
+            "layerOrder": 7,
+            "visible": true,
+            "x": -20,
+            "y": -38,
+            "size": 100,
+            "direction": 90,
+            "draggable": false,
+            "rotationStyle": "all around",
+            "objName": "Otto"
+        }
+    },
+    {
         "name": "Abby",
         "tags": [
             "people",

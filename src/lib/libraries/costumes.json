@@ -1,5 +1,18 @@
 [
     {
+        "name": "Otto-a",
+        "md5": "df6153c449c93bcd6eaeec23adb09f42.svg",
+        "type": "costume",
+        "tags": [
+            "robot"
+        ],
+        "info": [
+            48,
+            50,
+            1
+        ]
+    },
+    {
         "name": "Abby-a",
         "tags": [
             "people",

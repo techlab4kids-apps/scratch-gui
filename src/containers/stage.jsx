@@ -56,6 +56,7 @@ class Stage extends React.Component {
             this.canvas = this.renderer.canvas;
         } else {
             this.canvas = document.createElement('canvas');
+            // this.renderer = new Renderer(this.canvas, 0, 640, 0, 480);
             this.renderer = new Renderer(this.canvas);
             this.props.vm.attachRenderer(this.renderer);
 
@@ -149,9 +150,24 @@ class Stage extends React.Component {
     }
     getScratchCoords (x, y) {
         const nativeSize = this.renderer.getNativeSize();
+        var currentX;
+        var currentY;
+
+        if(this.renderer.getNativeX() === 0) {
+            currentX = (nativeSize[0] / this.rect.width) * (x);
+        }
+        else{
+            currentX = (nativeSize[0] / this.rect.width) * (x - (this.rect.width / 2));
+        }
+        if(this.renderer.getNativeY() === 0) {
+            currentY = (nativeSize[1] / this.rect.height) * (y - (this.rect.height));
+        }
+        else{
+            currentY = (nativeSize[1] / this.rect.height) * (y - (this.rect.height / 2));
+        }
+
         return [
-            (nativeSize[0] / this.rect.width) * (x - (this.rect.width / 2)),
-            (nativeSize[1] / this.rect.height) * (y - (this.rect.height / 2))
+            currentX, currentY
         ];
     }
     getColorInfo (x, y) {

@@ -14,6 +14,12 @@ import supportedBrowser from '../lib/supported-browser';
 
 import styles from './index.css';
 
+// import { defineCustomElements } from '@ionic/pwa-elements/loader';
+//
+// ReactDOM.render(<App />, document.getElementById('root'));
+//
+
+
 // Register "base" page view
 analytics.pageview('/');
 
@@ -25,6 +31,8 @@ if (supportedBrowser()) {
     // require needed here to avoid importing unsupported browser-crashing code
     // at the top level
     require('./render-gui.jsx').default(appTarget);
+    // // Call the element loader after the app has been rendered the first time
+    defineCustomElements(window);
 
 } else {
     BrowserModalComponent.setAppElement(appTarget);

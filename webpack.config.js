@@ -112,7 +112,7 @@ module.exports = [
         module: {
             rules: base.module.rules.concat([
                 {
-                    test: /\.(svg|png|wav|gif|jpg)$/,
+                    test: /\.(svg|png|wav|gif|jpg|ttf)$/,
                     loader: 'file-loader',
                     options: {
                         outputPath: 'static/assets/'
@@ -138,7 +138,7 @@ module.exports = [
             new HtmlWebpackPlugin({
                 chunks: ['lib.min', 'gui'],
                 template: 'src/playground/index.ejs',
-                title: 'Scratch 3.0 GUI',
+                title: 'Scratch 3.0 (TechLAB4Kids release ' + JSON.stringify(process.env.npm_package_version) + '))',
                 sentryConfig: process.env.SENTRY_CONFIG ? '"' + process.env.SENTRY_CONFIG + '"' : null
             }),
             new HtmlWebpackPlugin({
@@ -162,6 +162,10 @@ module.exports = [
             new CopyWebpackPlugin([{
                 from: 'static',
                 to: 'static'
+            }]),
+            new CopyWebpackPlugin([{
+                from: 'fonts',
+                to: 'static/assets'
             }]),
             new CopyWebpackPlugin([{
                 from: 'node_modules/scratch-blocks/media',
@@ -198,7 +202,7 @@ module.exports = [
             module: {
                 rules: base.module.rules.concat([
                     {
-                        test: /\.(svg|png|wav|gif|jpg)$/,
+                        test: /\.(svg|png|wav|gif|jpg|ttf)$/,
                         loader: 'file-loader',
                         options: {
                             outputPath: 'static/assets/',
@@ -211,6 +215,10 @@ module.exports = [
                 new CopyWebpackPlugin([{
                     from: 'node_modules/scratch-blocks/media',
                     to: 'static/blocks-media'
+                }]),
+                new CopyWebpackPlugin([{
+                    from: 'fonts',
+                    to: 'static/assets'
                 }]),
                 new CopyWebpackPlugin([{
                     from: 'extension-worker.{js,js.map}',
